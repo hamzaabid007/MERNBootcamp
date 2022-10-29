@@ -243,3 +243,21 @@ let d=arr.map(el=>{
 })
 
 console.log(d)
+
+for(let i=1;i<=50;i++){
+    if(i%3==0 && i%5==0)
+    {console.log("FUZZBUZZ")}
+    else if(i%5==0 && i%7==0)
+    {console.log("DUZZBUZZ")}
+    else if(i%3==0 && i%7==0)
+    {console.log("DUZZFUZZ")}
+    else if(i%3==0)
+    {console.log("FUZZ")}
+    else if(i%5==0)
+    {console.log("BUZZ")}
+    else if(i%7==0)
+    {console.log("DUZZ")}
+    else
+    console.log(i);
+
+}
