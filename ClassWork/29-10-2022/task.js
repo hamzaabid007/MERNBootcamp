@@ -217,3 +217,29 @@ console.log(a);
 let b=Employee.filter((ele)=>ele.Employee_Salary<5000); 
 console.log(b);
 
+let EmpObj = {}
+Employee.forEach(element => {
+    if(element.Employee_Name=='Hamza'){
+        return EmpObj = element;
+    }
+    else{
+        return false;
+    }
+});
+
+console.log(EmpObj);
+
+
+
+const Array = [2,3,6,9,15,30,33,40,51]
+
+let c= Array.filter((ele)=>(ele%2==0))
+console.log(c);
+
+const arr = [1,2,3,4,5]
+
+let d=arr.map(el=>{
+    return el*2
+})
+
+console.log(d)
