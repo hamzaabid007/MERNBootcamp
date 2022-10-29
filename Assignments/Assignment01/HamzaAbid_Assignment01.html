@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Validation</title>
+
+    <h1 allign="Center">Assignment 01</h1>
+    <br>
+    <h3>Please fill out the given form:</h3>
+    <br><br>
+
+</head>
+<body>
+    
+    <form action="#" method="get" onsubmit="handleSubmit()">
+        
+        <table style="margin-left: 150px;">
+            <tr>
+                <td>    
+                    <label style="margin-right: 50px;">Email Address:</label>
+                    <input id="email" style="margin-right: 80px; " type="email" required>
+                    
+                    <label style="margin-left: 80px;">Password:</label>
+                    <input id="password" style="margin-left: 50px;" type="password" required>
+                </td>    
+            </tr>
+        </table>   
+
+        <fieldset style="width: 1000px;">
+            <legend>Personal Profile</legend>
+            <br>
+            <table>
+                
+                <tr>
+                    <td>
+                        <Label>Name:</Label>
+                        <input id="name" style="margin-left: 120px;" type="text" required>
+
+                        <label style="margin-left: 200px;">Gender:</label>
+                        &nbsp;&nbsp;
+                            <input name="gender"  style="margin-left: 80px;" type="radio" value="male">Male
+                            <input  type="radio" name="gender" name="name" value="female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Cnic/B-Form No.</label>
+                        <input id="cnic" style="margin-left: 50px;" type="tel" pattern="^[0-9]{5}-[0-9]{7}-[0-9]{1}$" placeholder="12345-1234567-1" required>
+                        
+                        <label style="margin-left: 200px;">Picture</label>
+                        <input id="file" style="margin-left: 100px;" type="file">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>IUB Registration No.</label>
+                        <input id="regNo" style="margin-left: 25px;" type="text">
+
+                        <label style="margin-left: 200px;">Landline No.</label>
+                        <input id="telephone" style="margin-left: 60px;" type="tel" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Date of Birth</label>
+                        <input id="dob" style="margin-left: 80px;" type="date" required>
+
+                        <label style="margin-left: 255px;">Mobile No.</label>
+                        <input id="mobNo" style="margin-left: 70px;" type="tel" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Religion</label>
+                        <select style="margin-left: 110px;" required id="religion">
+                            <option disabled selected>--Select--</option>
+                            <option>Islam</option>
+                            <option>Christanity</option>
+                            <option>Hinduism</option>
+                        </select>
+
+                        <label style="margin-left: 285px;">Nationality</label>
+                        <input id="nationality" style="margin-left: 70px;" type="text" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Hafiz-e-Quran</label>
+                        <select id="hafiz" style="margin-left: 70px;" required>
+                            <option disabled selected>--Select--</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+
+                        <label style="margin-left: 295px;">Domicile(Province)</label>
+                        <select id="domicile" style="margin-left: 15px;" required>
+                            <option disabled selected>--Select--</option>
+                            <option>Federal</option>
+                            <option>Punjab</option>
+                            <option>Sindh</option>
+                            <option>KPK</option>
+                            <option>Balochistan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <label>Postal Address</label>
+                    <textarea id="postalAddress" style="margin-left: 70px; vertical-align: -40px;" rows="5" column="2" required></textarea>
+                </td>
+                </tr>
+            </table>
+
+        </fieldset>
+        <br>
+        <br>
+        <fieldset  style="width: 1000px;">
+            <legend>Father Information</legend>
+
+            <table>
+                <tr>
+                    <td>
+                        <label>Father Name</label>
+                        <input id="fatherName" style="margin-left: 80px;" type="text" required>
+
+                        <label style="margin-left: 200px">CNIC No.</label>
+                        <input id="fatherCnic" style="margin-left: 90px;" type="tel" pattern="^[0-9]{5}-[0-9]{7}-[0-9]{1}$" placeholder="12345-1234567-1" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Profession</label>
+                        <input id="profession" style="margin-left: 95px;" type="text" required>
+
+                        <label style="margin-left: 200px">Monthly Income</label>
+                        <input id="income" style="margin-left: 50px;" type="text" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Mobile Number</label>
+                        <input id="fatherMobNo" style="margin-left: 60px" type="tel" required>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <input style="margin-left: 380px; padding: 15px 50px;" type="reset" value="Reset">
+        <input style="padding: 15px 50px;" type="submit" value="Submit"> 
+    </form>
+
+
+
+    <h1> Form Submitted Data</h1>
+    <div>
+        <table>
+            <thead>
+                <td>Title</td>
+                <td>Value</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Email: </td>
+                    <td>
+                        <p id="Email"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password: 
+                    </td>
+                    <td>
+                        <p id="Password"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Profile Img:</td>
+                    <td>
+                        <img id="Profile" src="" alt="profileImg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Name: </td>
+                    <td>
+                        <p id="Name"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender: </td>
+                    <td>
+                        <p id="Gender"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cnic: </td>
+                    <td>
+                        <p id="Cnic"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Registration No: </td>
+                    <td>
+                        <p id="RegNo"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth: </td>
+                    <td>
+                        <p id="Dob"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile Number: </td>
+                    <td>
+                        <p id="MobNo"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Religion: </td>
+                    <td>
+                        <p id="Religion"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </ol>
+
+    </div>
+
+    <script>
+        function handleSubmit(){
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var name = document.getElementById("name").value;
+            // var gender = document.getElementsByName("gender").value;
+            // console.log("gemder: ", gender)
+            var cnic = document.getElementById("cnic").value;
+            var regNo = document.getElementById("regNo").value;
+            var dob = document.getElementById("dob").value;
+            var mobNo = document.getElementById("mobNo").value;
+            var religion = document.getElementById("religion").value;
+            var natonality = document.getElementById("nationality").value;
+            var hafiz = document.getElementById("hafiz").value;
+            var domicile = document.getElementById("domicile").value;
+            var postalAddress = document.getElementById("postalAddress").value;
+            var fatherName = document.getElementById("fatherName").value;
+            var profession = document.getElementById("profession").value;
+            var fatherCnic = document.getElementById("fatherCnic").value;
+            var fatherMobNo = document.getElementById("fatherMobNo").value;
+            var income = document.getElementById("income").value;
+           // var profile = document.getElementById("profile").value;
+            // console.log("profile image: ", profile);
+            document.getElementById("Email").innerHTML = email;
+            document.getElementById("Password").innerHTML = password;
+            document.getElementById("Name").innerHTML = name;
+            // document.getElementById("Gender").innerHTML = gender;
+            document.getElementById("Cnic").innerHTML = cnic;
+            document.getElementById("RegNo").innerHTML = regNo;
+            document.getElementById("Dob").innerHTML = dob;
+            document.getElementById("MobNo").innerHTML = mobNo;
+           // document.getElementById("Profile").src = profile;
+        }
+
+    </script>
+</body>
+</html>

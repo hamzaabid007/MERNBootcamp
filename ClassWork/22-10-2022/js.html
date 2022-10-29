@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+</head>
+<body>
+    <button type="button"
+    onclick="document.getElementById('demo').innerHTML = square()">
+    Click me to display square</button>
+
+    <button type="button"
+    onclick="document.getElementById('demo2').innerHTML = cube()">
+    Click me to display cube</button>
+
+    <button type="button"
+    onclick= PromptFunction()>
+    Click me to display name</button>
+
+    <h2 id="demo"></h2>
+    <p id="demo2"></p>
+
+
+    <form>
+        <label>Number 1</label>
+        <input type="number" id="num1">
+        <br>
+        <br>
+        <label>Number 2</label>
+        <input type="number" id="num2">
+        <br>
+        <br>
+        <button type="button" onclick=add()>
+        Add</button>
+        <button type="button" onclick=subtract()>
+        Subtract</button>
+
+
+        <h2 id="display"></h2>
+
+    </form>
+
+    <button onclick="colourChange('blue')">
+    Blue</button>
+    <button onclick="colourChange('green')">
+    Green</button>
+    <button onclick="colourChange('red')">
+    Red</button>
+
+    <p id="output_colour">Click button to change colour</p>
+
+    <form style="border: 2px solid; width: 300px;">
+        <br>
+        <label>Value</label>
+        <input type="number" id="num">
+        <br>
+        <br>
+        <select id="operation" style="margin-left: 90px" onchange=converter()>
+            <option>Square</option>
+            <option>Double</option>
+        </select>
+        <br>
+        <br>
+        <label>Result</label>
+        <input type="number" id="result">
+        <br>
+        <br>
+    </form>
+</body>
+
+<script>
+    let a= 5;
+    function square(){
+        document.write("square: " + (a*a));
+    }
+   
+    function cube(){
+        document.write("cube: " + (a*a*a));
+    }
+    
+    function PromptFunction(){
+        let person = prompt("Please Enter Your Name:");
+        if(person!=null){
+            document.getElementById("demo").innerHTML = "Hello! " + person;
+        }
+    }
+
+    function add(){
+        let num1=document.getElementById("num1")
+        let num2=document.getElementById("num2")
+
+       let result=parseInt(num1.value)+parseInt(num2.value)
+       let display = document.getElementById("display")
+
+       display.innerHTML= "Sum of two numbers are: " + result
+        
+    }
+
+    function subtract(){
+        let num1=document.getElementById("num1")
+        let num2=document.getElementById("num2")
+
+       let result=parseInt(num1.value)-parseInt(num2.value)
+       let display = document.getElementById("display")
+
+       display.innerHTML="Subtraction of two numbers are: " + result
+        
+    }
+
+    function colourChange(a){
+        document.getElementById("output_colour").style.color=a;
+    }
+
+    function converter(){
+        
+    }
+    
+    function example(){
+        var obj = 123;
+
+        for(var i=0; i<10; i++){
+            console.log(i);
+        } 
+    }
+
+</script>
+
+</html>
