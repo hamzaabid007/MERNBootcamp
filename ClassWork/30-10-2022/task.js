@@ -34,3 +34,15 @@ console.log(
   "🚀 ~ file: task.js ~ line 33 ~ percentage",
   percentage.calculatePercentage(800)
 );
+
+const obj = {
+  name: "HAMZA",
+
+  address: {
+    city: "Islamabad",
+    country: "Pakistan",
+  },
+  getAddress() {
+    console.log($[this.address.city]);
+  },
+};
