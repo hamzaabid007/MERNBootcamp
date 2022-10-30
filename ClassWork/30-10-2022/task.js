@@ -21,7 +21,7 @@ const converter = (num, value) => {
 };
 
 converter();
-console.log("🚀 ~ file: task.js ~ line 27 ~ converter", converter(70, "c"));
+console.log(" 🚀 ~ file: task.js ~ line 27 ~ converter", converter(70, "c"));
 
 const percentage = {
   name: "hamza",
