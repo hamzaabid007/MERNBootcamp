@@ -47,5 +47,13 @@ const arr = [
 //const max = Math.max(...[].concat(...arr));
 
 const flat = arr.flat();
-const max = Math.max(...flat);
+// unique = arr.filter((v, i) => arr.indexOf(v) === arr.lastIndexOf(v));
+// console.log(unique);
+let max = Math.max(...flat);
+// for (let i = 0; i < flat.length; i++) {
+//   if (max == flat[i]) {
+//     max = 0;
+//   }
+// }
+
 console.log(max);
